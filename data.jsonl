@@ -1,0 +1,40 @@
+{"idx": 1, "func": "public int add(int a, int b) {\n    return a + b;\n}"}
+{"idx": 2, "func": "public int sum(int x, int y) {\n    return x + y;\n}"}
+{"idx": 3, "func": "public boolean isEven(int num) {\n    return num % 2 == 0;\n}"}
+{"idx": 4, "func": "public boolean checkEven(int n) {\n    return n % 2 == 0;\n}"}
+{"idx": 5, "func": "public int max(int a, int b) {\n    return (a > b) ? a : b;\n}"}
+{"idx": 6, "func": "public int maximum(int x, int y) {\n    return (x > y) ? x : y;\n}"}
+{"idx": 7, "func": "public int factorial(int n) {\n    int result = 1;\n    for (int i = 1; i <= n; i++) {\n        result *= i;\n    }\n    return result;\n}"}
+{"idx": 8, "func": "public int fact(int num) {\n    int product = 1;\n    for (int i = 1; i <= num; i++) {\n        product *= i;\n    }\n    return product;\n}"}
+{"idx": 9, "func": "public int findLength(String str) {\n    return str.length();\n}"}
+{"idx": 10, "func": "public int lengthOfString(String s) {\n    return s.length();\n}"}
+{"idx": 11, "func": "public int subtract(int a, int b) {\n    return a - b;\n}"}
+{"idx": 12, "func": "public int add(int a, int b) {\n    return a + b;\n}"}
+{"idx": 13, "func": "public boolean isOdd(int num) {\n    return num % 2 != 0;\n}"}
+{"idx": 14, "func": "public boolean isEven(int num) {\n    return num % 2 == 0;\n}"}
+{"idx": 15, "func": "public int multiply(int a, int b) {\n    return a * b;\n}"}
+{"idx": 16, "func": "public int divide(int a, int b) {\n    if (b == 0) throw new ArithmeticException();\n    return a / b;\n}"}
+{"idx": 17, "func": "public int sumOfArray(int[] arr) {\n    int sum = 0;\n    for (int num : arr) {\n        sum += num;\n    }\n    return sum;\n}"}
+{"idx": 18, "func": "public int productOfArray(int[] arr) {\n    int product = 1;\n    for (int num : arr) {\n        product *= num;\n    }\n    return product;\n}"}
+{"idx": 19, "func": "public boolean contains(int[] arr, int target) {\n    for (int num : arr) {\n        if (num == target) return true;\n    }\n    return false;\n}"}
+{"idx": 20, "func": "public int findMax(int[] arr) {\n    int max = arr[0];\n    for (int num : arr) {\n        if (num > max) max = num;\n    }\n    return max;\n}"}
+{"idx": 21, "func": "public int[] qwerty(int[] nums) {\n    List<Integer> result = new ArrayList<>();\n    for (int num : nums) {\n        if (num % 2 == 0) {\n            result.add(num);\n        }\n    }\n    return result.stream().mapToInt(i -> i).toArray();\n}"}
+{"idx": 22, "func": "public int[] getEvenNumbers(int[] numbers) {\n    ArrayList<Integer> evens = new ArrayList<>();\n    for (int n : numbers) {\n        if (n % 2 == 0) {\n            evens.add(n);\n        }\n    }\n    return evens.stream().mapToInt(i -> i).toArray();\n}"}
+{"idx": 23, "func": "public int myFunction(int a, int b) {\n    while (b != 0) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}"}
+{"idx": 24, "func": "public int tmp(int x, int y) {\n    while (y != 0) {\n        int remainder = x % y;\n        x = y;\n        y = remainder;\n    }\n    return x;\n}"}
+{"idx": 25, "func": "public String rs(String str) {\n    StringBuilder reversed = new StringBuilder();\n    for (int i = str.length() - 1; i >= 0; i--) {\n        reversed.append(str.charAt(i));\n    }\n    return reversed.toString();\n}"}
+{"idx": 26, "func": "public String tmp(String text) {\n    StringBuilder sb = new StringBuilder();\n    for (int j = text.length() - 1; j >= 0; j--) {\n        sb.append(text.charAt(j));\n    }\n    return sb.toString();\n}"}
+{"idx": 27, "func": "public int[] mergeSortedArrays(int[] arr1, int[] arr2) {\n    int[] merged = new int[arr1.length + arr2.length];\n    int i = 0, j = 0, k = 0;\n    while (i < arr1.length && j < arr2.length) {\n        if (arr1[i] <= arr2[j]) {\n            merged[k++] = arr1[i++];\n        } else {\n            merged[k++] = arr2[j++];\n        }\n    }\n    while (i < arr1.length) {\n        merged[k++] = arr1[i++];\n    }\n    while (j < arr2.length) {\n        merged[k++] = arr2[j++];\n    }\n    return merged;\n}"}
+{"idx": 28, "func": "public int[] combineSortedArrays(int[] a, int[] b) {\n    int[] result = new int[a.length + b.length];\n    int i = 0, j = 0, idx = 0;\n    while (i < a.length && j < b.length) {\n        if (a[i] <= b[j]) {\n            result[idx++] = a[i++];\n        } else {\n            result[idx++] = b[j++];\n        }\n    }\n    while (i < a.length) {\n        result[idx++] = a[i++];\n    }\n    while (j < b.length) {\n        result[idx++] = b[j++];\n    }\n    return result;\n}"}
+{"idx": 29, "func": "public boolean cd(int[] nums) {\n    Set<Integer> seen = new HashSet<>();\n    for (int num : nums) {\n        if (!seen.add(num)) {\n            return true;\n        }\n    }\n    return false;\n}"}
+{"idx": 30, "func": "public boolean f(int[] arr) {\n    HashSet<Integer> uniqueElements = new HashSet<>();\n    for (int value : arr) {\n        if (!uniqueElements.add(value)) {\n            return true;\n        }\n    }\n    return false;\n}"}
+{"idx": 31, "func": "public int[] filter(int[] nums) {\n    List<Integer> result = new ArrayList<>();\n    for (int num : nums) {\n        if (num % 2 == 0) {\n            result.add(num);\n        }\n    }\n    return result.stream().mapToInt(i -> i).toArray();\n}"}
+{"idx": 32, "func": "public int[] filter(int[] nums) {\n    List<Integer> result = new ArrayList<>();\n    for (int num : nums) {\n        if (num % 2 != 0) {\n            result.add(num);\n        }\n    }\n    return result.stream().mapToInt(i -> i).toArray();\n}"}
+{"idx": 33, "func": "public int calculateLCM(int a, int b) {\n    return (a * b) / calculateGCD(a, b);\n}"}
+{"idx": 34, "func": "public int calculateGCD(int a, int b) {\n    while (b != 0) {\n        int temp = b;\n        b = a % b;\n        a = temp;\n    }\n    return a;\n}"}
+{"idx": 35, "func": "public String to(String str) {\n    StringBuilder upperStr = new StringBuilder();\n    for (int i = 0; i < str.length(); i++) {\n        upperStr.append(Character.toUpperCase(str.charAt(i)));\n    }\n    return upperStr.toString();\n}"}
+{"idx": 36, "func": "public String reverseString(String str) {\n    StringBuilder reversed = new StringBuilder();\n    for (int i = str.length() - 1; i >= 0; i--) {\n        reversed.append(str.charAt(i));\n    }\n    return reversed.toString();\n}"}
+{"idx": 37, "func": "public int[] mergeTmp(int[] arr1, int[] arr2) {\n    int[] merged = new int[arr1.length + arr2.length];\n    int i = 0, j = 0, k = 0;\n    while (i < arr1.length && j < arr2.length) {\n        if (arr1[i] <= arr2[j]) {\n            merged[k++] = arr1[i++];\n        } else {\n            merged[k++] = arr2[j++];\n        }\n    }\n    while (i < arr1.length) {\n        merged[k++] = arr1[i++];\n    }\n    while (j < arr2.length) {\n        merged[k++] = arr2[j++];\n    }\n    return merged;\n}"}
+{"idx": 38, "func": "public int[] mergeTmp(int[] arr1, int[] arr2) {\n    int[] merged = new int[arr1.length + arr2.length];\n    int i = 0, j = 0, k = 0;\n    while (i < arr1.length && j < arr2.length) {\n        merged[k++] = arr1[i] * arr1[i] <= arr2[j] * arr2[j] ? arr1[i++] * arr1[i] : arr2[j++] * arr2[j];\n    }\n    return merged;\n}"}
+{"idx": 39, "func": "public int findSum(int[] arr) {\n    int sum = 0;\n    for (int num : arr) {\n        sum += num;\n    }\n    return sum;\n}"}
+{"idx": 40, "func": "public boolean containsNegative(int[] arr) {\n    for (int num : arr) {\n        if (num < 0) return true;\n    }\n    return false;\n}"}
